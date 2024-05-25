@@ -1,7 +1,6 @@
 import os
 import pickle
 import streamlit as st
-import sklearn
 from streamlit_option_menu import option_menu
 
 # Set page configuration
