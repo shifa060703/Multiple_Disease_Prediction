@@ -1,2 +1,5 @@
 streamlit
 scikit-learn
+streamlit_option_menu
+pickle
+os
