@@ -15,11 +15,20 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # loading the saved models
 
-diabetes_model = pickle.load(open(r'C:\Users\yaswa\Downloads\Multiple_disease_prediction\models\diabetes_model.sav', 'rb'))
+# Use relative paths to load models
+model_path = 'models/diabetes_model.sav'
+with open(model_path, 'rb') as file:
+    diabetes_model = pickle.load(file)
 
-heart_disease_model = pickle.load(open(r'C:\Users\yaswa\Downloads\Multiple_disease_prediction\models\heart_disease_model.sav', 'rb'))
+# Similarly load other models
+heart_disease_model_path = 'models/heart_disease_model.sav'
+with open(heart_disease_model_path, 'rb') as file:
+    heart_disease_model = pickle.load(file)
 
-parkinsons_model = pickle.load(open(r'C:\Users\yaswa\Downloads\Multiple_disease_prediction\models\parkinsons_model.sav', 'rb'))
+# Similarly load other models
+parkinson_disease_model_path = 'models/parkinsons_model.sav'
+with open(parkinson_disease_model_path, 'rb') as file:
+    parkinsons_model = pickle.load(file)
 
 # sidebar for navigation
 with st.sidebar:
